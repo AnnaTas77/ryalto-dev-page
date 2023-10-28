@@ -3,8 +3,10 @@
     --border-radius: 0.25rem;
     --body-bg: #e5e5f7;
     --black: #000000;
+    --transparent-black: #000000a8;
     --white: #ffffff;
     --light-pink: #fff2fc;
+    --color-navy: #10162f;
 
     color-scheme: li;
 }
@@ -30,7 +32,7 @@ a {
 }
 
 nav {
-    border-bottom: solid var(--border-thickness) var(--black);
+    border-bottom: solid var(--border-thickness) var(--transparent-black);
     background: linear-gradient(91deg, #e7f7fe 0%, #d6eaf9 25%, #f4f7f5 50%, #fdd9df 75%, #f0fced 100%);
     display: flex;
     justify-content: space-between;
@@ -39,6 +41,7 @@ nav {
     top: 0;
     width: 100%;
     z-index: 100;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 #logo-container {
@@ -139,6 +142,13 @@ nav ul li:hover {
 
 #content {
     padding: 3rem max((100% - 71.25rem)/2, 4rem);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#content a {
+    border-radius: var(--border-radius);
 }
 
 #content p {
@@ -150,26 +160,13 @@ nav ul li:hover {
     background-color: var(--white);
     margin-top: -0.0625rem;
     border: solid var(--border-thickness) var(--black);
-}
-
-.first_blog_entry {
-    border-left: solid var(--border-thickness) var(--black);
-    border-right: solid var(--border-thickness) var(--black);
-    border-top: solid var(--border-thickness) var(--black);
-    border-top-right-radius: var(--border-radius);
-    border-top-left-radius: var(--border-radius);
-}
-
-.last_blog_entry {
-    border-left: solid var(--border-thickness) var(--black);
-    border-right: solid var(--border-thickness) var(--black);
-    border-bottom: solid var(--border-thickness) var(--black);
-    border-bottom-right-radius: var(--border-radius);
-    border-bottom-left-radius: var(--border-radius);
+    border-radius: var(--border-radius);
 }
 
 #content article:hover {
     background-color: var(--light-pink);
+    transform: translate(4px, -4px);
+    box-shadow: -8px 8px 0 var(--color-navy);
 }
 
 #content article header {
@@ -217,11 +214,11 @@ footer h5 {
 
 @media screen and (max-width: 1024px) {
     #content {
-        padding: 1rem;
+        padding: 1.8rem;
     }
 
     #title-container {
-        padding: 1rem;
+        padding: 1.8rem;
     }
 
     nav ul li {
