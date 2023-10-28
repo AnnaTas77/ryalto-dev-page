@@ -8,7 +8,7 @@
     --light-pink: #fff2fc;
     --color-navy: #10162f;
 
-    color-scheme: li;
+    /* color-scheme: li; */
 }
 
 body {
@@ -32,11 +32,11 @@ a {
 }
 
 nav {
-    border-bottom: solid var(--border-thickness) var(--transparent-black);
-    background: linear-gradient(91deg, #e7f7fe 0%, #d6eaf9 25%, #f4f7f5 50%, #fdd9df 75%, #f0fced 100%);
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: solid var(--border-thickness) var(--transparent-black);
+    background: linear-gradient(91deg, #e7f7fe 0%, #d6eaf9 25%, #f4f7f5 50%, #fdd9df 75%, #f0fced 100%);
     position: fixed;
     top: 0;
     width: 100%;
@@ -138,7 +138,7 @@ nav ul li:hover {
     background-color: var(--light-pink);
 }
 
-/* Content of page / Blog posts  */
+/* Content / Blog posts  */
 
 #content {
     padding: 3rem max((100% - 71.25rem)/2, 4rem);
